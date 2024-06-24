@@ -1,255 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee Shop Landing Page</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <title>Spotify Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-        .bimage {
-            background-image: url('https://img.freepik.com/free-vector/hand-drawn-coffee-shop-pattern-background_23-2150849907.jpg?size=626&ext=jpg&ga=GA1.1.521651446.1718354357&semt=ais_user');
-            background-size: cover;
-            height: 108vh;
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-        }
-   h1 {
-            font-size: 20px;
-        }
+header {
+    background-color: #1DB954;
+    padding: 10px 20px;
+    color: white;
+}
 
-        header {
-
-            background-color: white;
-            padding: 0px 0;
-            text-align: center;
-            margin-bottom:20px;
-            border-radius:20px;
-            
-
-        }
-
-        nav {
-            background-color:white;
-            padding: 10px 0;
-            border-radius:20px;
-            margin-right:100px;
-        }
-
-        nav a {
-            color: brown;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 20px;
-            
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .head{
-            padding:10px;
-            margin:20px;
-            font-family: bree serif;
-            font-size: 60px;
-            color: green;
-            margin-right:100px;
-            margin-left:50px;
-        }
-
-        .hero {
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+    
 
 
-            background-position: center;
-            height: 200px;
-            display: flex;
-            justify-content: end;
-            align-items:center;
-            color: #C0C0C0; 
-;
-            text-align: center;
-        }
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    
+    
+}
 
-        .hero h1 {
-            font-size: 50px;
-            margin: 40px;
-            font-family: Bree sans-serif;
+nav ul {
+    list-style: none;
+    display: flex;
+}
 
-        }
-        .gap{
-            color:white;
-            font-family:bree serif;
-            padding:20px;
-            margin-right:200px;
-            font-size:25px;
-            text-align:left;
-        }
-        
+nav ul li {
+    margin-left: 20px;
+}
 
-        .content {
-            padding: 20px;
-            margin:30px;
-        }
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        .content h2 {
-            text-align: center;
-        }
+nav ul li a.login {
+    color: #1DB954;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
 
-        .himage {
-            height: 200px;
-            width: 200px;
-            margin-right:50px;
-        }        
-           
-        .image {
-            height: 200px;
-            width: 200px;
-            margin-bottom:50px;
-            margin-right:300px;    
-        
-        }
-        .jimage{
-            height: 200px;
-            width: 200px;
-            margin-bottom:50px;
-        }
+nav ul li a.signup {
+    color: white;
+    background-color: #1DB954;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
 
-        .text{
-            text-align:left;
-        }
-        .content p {
-            max-width: 600px;
-            margin: 10px auto;
-            line-height: 1.6;
-        }
-        .butto{
-            margin:10px;
-            padding:10px;
-           
-        }
-        button{
-            background-color:lightgreen;
-            height:50px;
-            width:100px;
-            border-radius:20px;
-            font-family:sans serif;
-            
-        }
-        .about{
-            background-color:blue;
-            padding:20px;
-            margin:20px;
-            border-radius:30px;
-        }
-        .menu{
-            background-color:#CC6CE7;
-            padding:20px;
-            margin:20px;
-            border-radius:30px;
-        }
-        .contact{
-            background-color:#98F5F9;
-            padding:20px;
-            margin:20px;
-            border-radius:30px;
-        }
-        
+main {
+    flex: 1;
+}
 
-        footer {
+.hero {
+    background: url('https://img.freepik.com/free-photo/artistic-blurry-colorful-wallpaper-background_58702-10248.jpg?size=626&ext=jpg&ga=GA1.1.521651446.1718354357&semt=ais_user') no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+}
 
-            color: white;
-            text-align: left;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
+.hero-content {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: #1DB954;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+footer {
+    background-color: #1DB954;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+.login1{
+    margin:0px;
+    padding: 120px;
+    background-image: url("https://png.pngtree.com/background/20230827/original/pngtree-spotify-logo-in-3d-with-ample-copy-space-for-background-picture-image_4839099.jpg");
+}
+
+
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.login-box {
+    background-color: #1DB954;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 300px;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.btn {
+    background-color: #121212;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.extra-links {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.extra-links a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-top: 5px;
+}
+
+.extra-links a:hover {
+    text-decoration: underline;
+}
+
+
     </style>
 </head>
-
 <body>
-    <div class="bimage">
-        <header class="heading">
-            <div class="d-flex flex-row justify-content-end">
-                <img src="https://png.pngtree.com/png-vector/20231015/ourmid/pngtree-3d-illustration-coffee-shop-png-image_10161654.png" class="himage"/>
-            <h1 class="head">Welcome to Our Coffee Shop</h1>
-            
-            <img src="https://png.pngtree.com/png-vector/20231015/ourmid/pngtree-3d-illustration-coffee-shop-png-image_10161654.png" class="himage"/>
-        </div>
-        </header>
-        <div class="d-flex flex-row justify-content-end">
+    <header>
         <nav>
-            <a href="home">Home</a>
-            <a href="#menu">Menu</a>
-            <a href="#about">About Us</a>
-            <a href="#contact">Contact</a>
-        </nav>
-        </div>
-        <div  class= "hero">
-            <img src="https://static.vecteezy.com/system/resources/thumbnails/023/628/609/small/coffee-shop-logo-design-png.png" class="jimage"/>
-        
-            <h1>Freshly Brewed Coffee</h1>
             
-            <img src="https://static.vecteezy.com/system/resources/thumbnails/023/628/609/small/coffee-shop-logo-design-png.png" class="image"/>
-        </div>
-        <div class="d-flex flex-row justify-content-end">
-        <p class="gap">A coffeehouse, coffee shop, or café is an establishment that primarily </br>
-            serves various types of coffee, espresso, latte, and cappuccino. Some coffeehouses may serve</br>
-             cold drinks, such as iced coffee and iced tea, as well as other non-caffeinated beverages.</p>
-             
-             <img src="data:image/jpeg;base64,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"
-      class="himage"/>
-      </div>
-    
-    
-             <div class="d-flex flex-row justify-content-center butto">
-        <button> Visit Now</button>
-        </div>
-        </div>
-        
-        
-        <div class="content ">
-            <div class="about">
-            <section id="about">
-            <h2>About Us</h2>
-            <p>
-                We are passionate about coffee. Our beans are sourced from the best farms around the world and roasted to perfection. Visit us for a warm cup of your favorite coffee and a cozy atmosphere.
-            </p>
+            <div class="logo">Spotify</div>
+            <ul>
+                <li><a href="https://www.spotify.com/in-en/premium/">Premium</a></li>
+                <li><a href="https://support.spotify.com/de-en/">Help</a></li>
+                <li><a href="https://www.spotify.com/de-en/download/windows/">Download</a></li>
+                <li><a href="#login" class="login">Log In</a></li>
+                <li><a href="https://www.spotify.com/in-en/free/?utm_source=in-en_brand_contextual_text&utm_medium=paidsearch&utm_campaign=alwayson_asia_in_premiumbusiness_core_brand_neev+contextual+in-en+google&gad_source=1&gclid=Cj0KCQjwj9-zBhDyARIsAERjds34N2JluTl1SHORAX61-xjS6sM38OH16ePArLh19BPMYmpzNIc1-3gaAj0_EALw_wcB&gclsrc=aw.ds" class="signup">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Music for everyone.</h1>
+                <p>Millions of songs. No credit card needed.</p>
+                <a href="#" class="btn">Get Spotify Free</a>
             </div>
         </section>
-        <div class="menu">
-             <section id="menu">
-            <h2>Menu</h2>
-            <p>
-                Enjoy our wide variety of coffees, teas, and pastries. From classic espresso to specialty lattes, we have something for every coffee lover.
-            </p>
-        </section>
-        </div> 
-        <div class="contact">
-            <section id="contact">
-            <h2>Contact Us</h2>
-            <p>
-                Location: 123 Coffee Lane, Caffeine City, Java Country<br>
-                Phone: (123) 456-7890<br>
-                Email: info@coffeeshop.com
-            </p>
-        </section>
+    
+      <section class="login1" id ="login">
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Login to Spotify</h2>
+            <form>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn">Log In</button>
+                <div class="extra-links">
+                    <a href="#">Forgot your password?</a>
+                    <a href="#">Don't have an account? Sign Up</a>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
-</div>
-        <footer>
-            &copy; 2024 Coffee Shop. All rights reserved.
-        </footer>
-  
+</section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Spotify AB</p>
+    </footer>
 </body>
-
 </html>
